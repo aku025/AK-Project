@@ -3,7 +3,11 @@ My Project
 
 Automated ELK Stack Deployment
 
+https://github.com/aku025/AK-Project/blob/main/AK-Project/Diagram.png
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Project 1 Red-Team Network Diagram file may be used to install only certain pieces of it, such as Filebeat.
+
+https://github.com/aku025/AK-Project/blob/main/AK-Project/Filebeat.txt
 
 This document contains the following details:
 - Description of the Topology
@@ -19,10 +23,10 @@ The main objective of this project is to test the vulnerabilities of a DVWA (DAM
 
 Load balancing ensures that the application will be highly operational, in addition to restricting unwanted traffic to the network.
     
-    What aspect of security do load balancers protect? 
+What aspect of security do load balancers protect? 
 - It ensures that a single server does not become overworked and stressed, therefore maintaining efficiency and keeps the servers online.
 
-    What is the advantage of a jump box?
+What is the advantage of a jump box?
 - A jump box/server acts as a gateway to your infrastructure. Being the only entrance, it helps limit potential attacks
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system logs.
@@ -78,6 +82,8 @@ The playbook implements the following tasks:
 3. Created (in /etc/ansible/roles) and Ran ELK playbook (Elk_Playbook.yml)
 4. Confirm Elk VM is functional (SSH)
 
+https://github.com/aku025/AK-Project/blob/main/AK-Project/ELK%20VM%20CONFIRM.png
+
 Target Machines & Beats
 
 *This ELK server is configured to monitor the following machines:
@@ -95,10 +101,14 @@ Filebeat
 - Copy the filebeat-configuration.yml file to /etc/ansible/roles/files.
 - Update the filebeat-configuration.yml file to include the ELK private IP in lines 1106 and 1806.
 - Run the playbook and navigate to http://52.189.193.248:5601/ 
+https://github.com/aku025/AK-Project/blob/main/AK-Project/Filebeat%20Screen.png
+
 Metricbeat
 - Copy the metricbeat-configuration.yml file to /etc/ansible/roles/files.
 - Update the metricbeat-configuration.yml file to include the ELK private IP in lines 62 and 96.
 - Run the playbook and navigate to http://52.189.193.248:5601/
+https://github.com/aku025/AK-Project/blob/main/AK-Project/MetricBeat%20Screen.png
+
 Answer the following questions to fill in the blanks:
 Which file is the playbook? filebeat-playbook.yml
 Where do you copy it? /etc/ansible/roles
